@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: rgb(255, 255, 255);
+}
+
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+nav ul li a:hover {
+  color: rgb(156, 156, 255);
+  text-shadow: white;
+  text-transform: uppercase;
+
+}
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav h1 {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00d2ff;
+  animation: waveMove 2s infinite linear;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.hero {
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  color: #fff;
+  text-align: center;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.info
+{
+  color: rgb(56, 10, 182);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cv
+{
+  text-decoration:none;
+  font-size: 20px;
+  font-style:italic;
+  font-weight: bolder;
+  border: solid hwb(191 0% 0%);
+  background-color: hwb(191 0% 0%) ;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-grid :hover
+{
+  background-color: rgb(98, 230, 98);
+  color: white;
+  text-transform:uppercase;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.7rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer .socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
